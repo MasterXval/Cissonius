@@ -20,5 +20,5 @@
 version = node['java']['jdk_version']
 java_home = node['java']['java_home']
 java_home_parent = ::File.dirname java_home
-jdk_home = ""
+jdk_home = java_home
 
