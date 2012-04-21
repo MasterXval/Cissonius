@@ -9,7 +9,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#     http://www.macports.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -19,16 +19,31 @@
 
 #see https://gist.github.com/661713
 action :enable do
-  print "====================>  ENABLE"
+  cmd = Chef::ShellOut.new(
+                               %Q[ launchctl load -w /Library/LaunchDaemons/org.macports.tomcat6.plist 
+                                 ] ).run_command
+  unless cmd.exitstatus == 0
+    Chef::Application.fatal!("Failed to enable tomcat !")
+  end
 end
 
 action :start do
-  print "====================>  START"
+  cmd = Chef::ShellOut.new(
+                               %Q[ launchctl load -w /Library/LaunchDaemons/org.macports.tomcat6.plist
+				   
+                                 ] ).run_command
+  unless cmd.exitstatus == 0
+    Chef::Application.fatal!("Failed to start tomcat !")
+  end
 end
+
 action :stop do
-  print "====================>  STOP"
+  cmd = Chef::ShellOut.new(
+                               %Q[ launchctl unload -w /Library/LaunchDaemons/org.macports.tomcat6.plist 
+                                 ] ).run_command
+  unless cmd.exitstatus == 0
+    Chef::Application.fatal!("Failed to stop tomcat !")
+  end
 end
-action :disable do
-  print "====================>  DISABLE"
-end
+
 
