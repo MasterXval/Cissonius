@@ -41,6 +41,8 @@ service "tomcat" do
     supports :restart => true, :status => true
   when "debian","ubuntu"
     supports :restart => true, :reload => true, :status => true
+  when "mac_os_x", "mac_os_x_server"
+    provider "tomcat_mac"
   end
   action [:enable, :start]
 end
@@ -54,6 +56,14 @@ when "centos","redhat","fedora"
     mode "0644"
     notifies :restart, resources(:service => "tomcat")
   end
+when "mac_os_x", "mac_os_x_server"
+  template "/opt/local/share/java/tomcat6/conf/setenv.local" do
+    source "default_tomcat6.erb"
+    owner "root"
+    group "admin"
+    mode "0644"
+    notifies :restart, resources(:service => "tomcat")
+  end
 else  
   template "/etc/default/tomcat6" do
     source "default_tomcat6.erb"
@@ -64,10 +74,21 @@ else
   end
 end
 
-template "/etc/tomcat6/server.xml" do
-  source "server.xml.erb"
-  owner "root"
-  group "root"
-  mode "0644"
-  notifies :restart, resources(:service => "tomcat")
+case node["platform"]
+when "mac_os_x", "mac_os_x_server"
+  template "/opt/local/share/java/tomcat6/conf/server.xml" do
+    source "server.xml.erb"
+    owner "root"
+    group "admin"
+    mode "0644"
+    notifies :restart, resources(:service => "tomcat")
+  end
+else
+  template "/etc/tomcat6/server.xml" do
+    source "server.xml.erb"
+    owner "root"
+    group "root"
+    mode "0644"
+    notifies :restart, resources(:service => "tomcat")
+  end
 end
