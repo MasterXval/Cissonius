@@ -1,16 +1,23 @@
 package controllers
 
 import play.api.data.Form
-import play.api.data.Forms.{single, nonEmptyText}
+import play.api.data.Forms._
 import play.api.mvc.{Action, Controller}
 import anorm.NotAssigned
 
-import model.Product
 import com.codahale.jerkson.Json
+import model.Product
 
 object Application extends Controller {
+
   val productForm = Form(
-    single("name" -> nonEmptyText)
+    tuple(
+      "name" -> text,
+      "description" -> text,
+      "price" -> number,
+      "price_strikeout" -> number,
+      "image" -> text
+    )
   )
 
   def index = Action {
@@ -21,8 +28,8 @@ object Application extends Controller {
     productForm.bindFromRequest.fold(
     errors => BadRequest,
     {
-      case (name) =>
-        Product.create(Product(NotAssigned, name))
+      case (name, description, price, price_strikeout, image) =>
+        Product.create(Product(NotAssigned, name, description, price, price_strikeout, image))
         Redirect(routes.Application.index())
     }
     )
@@ -30,9 +37,7 @@ object Application extends Controller {
 
   def listProducts() = Action {
     val products = Product.findAll()
-
     val json = Json.generate(products)
-
     Ok(json).as("application/json")
   }
 }

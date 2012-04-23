@@ -1,9 +1,13 @@
-@(form: play.api.data.Form[String])
+@(form: play.api.data.Form[(String, String, Int, Int, String)])
 
 @main("Welcome to Play 2.0") {
 
 @helper.form(action = routes.Application.addProduct) {
 @helper.inputText(form("name"))
+@helper.inputText(form("description"))
+@helper.inputText(form("price"))
+@helper.inputText(form("price_strikeout"))
+@helper.inputText(form("image"))
 <input type="submit"/>
 }
 
