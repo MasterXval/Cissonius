@@ -21,12 +21,48 @@
     </div>
 </div>
 
-@helper.form(action = routes.Application.addProduct) {
-@helper.inputText(form("name"))
-@helper.inputText(form("description"))
-@helper.inputText(form("price"))
-@helper.inputText(form("price_strikeout"))
-@helper.inputText(form("image"))
-<input type="submit"/>
+<br>
+
+<div class="row"><br>
+    <div class="span12"><br>
+        @helper.form(action = routes.Application.addProduct, args = 'class -> "form-horizontal") {
+        <fieldset>
+        <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+                <input type="text" class="input-xlarge" id="name" name="name">
+            </div>
+        </div>
+            <div class="control-group">
+                <label class="control-label" for="description">Description</label>
+                <div class="controls">
+                    <input type="text" class="input-xlarge" id="description" name="description">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="price">Price</label>
+                <div class="controls">
+                    <input type="text" class="input-xlarge" id="price" name="price">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="price_strikeout">Price Strikeout</label>
+                <div class="controls">
+                    <input type="text" class="input-xlarge" id="price_strikeout" name="price_strikeout">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="image">Image</label>
+                <div class="controls">
+                    <input type="text" class="input-xlarge" id="image" name="image">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary" >Add Product</button>
+                <button class="btn">Cancel</button>
+            </div>
+        </fieldset>
+    }
 }
-}
+    </div>
+</div>
