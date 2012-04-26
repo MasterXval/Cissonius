@@ -1,0 +1,35 @@
+
+@import helper.twitterBootstrap._
+@main("Welcome to Play 2.0") {
+@navigation()
+<script>
+
+    function fetchProducts() {
+    $.getJSON('listProducts', function(data) {
+    var items = [];
+
+    $.each(data, function(key, val) {
+        items.push('<li id="' + key + '"><div><img height="200" width="200" src='+ val["image"] + '/>' + val['name'] + '</div></li>');
+    });
+
+    $('<ul/>', {
+    'class': 'product-list',
+    html: items.join('')
+    }).appendTo('body');
+    });
+    }
+
+
+    $(document).ready(function () {
+        fetchProducts()
+    });
+</script>
+<br>
+
+<div class="row"><br>
+    <div class="span12"><br>
+     <div class="product-list"></div>
+    </div>
+</div>
+
+}

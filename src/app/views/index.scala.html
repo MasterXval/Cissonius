@@ -1,25 +1,8 @@
 @(form: play.api.data.Form[(String, String, Int, Int, String)])
 
 @import helper.twitterBootstrap._
-<link href="@routes.Assets.at("bootstrap/css/bootstrap.min.css")" rel="stylesheet"></script>
 @main("Welcome to Play 2.0") {
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <ul class="nav">
-                <li class="active">
-                    <a class="brand" href="#Cissonius">Cissonius</a>
-                </li>
-                <li><a href="#Products">Products</a></li>
-                <li><a href="#Help">Help</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-            <form class="navbar-search pull-left">
-                <input type="text" class="search-query" placeholder="Search" />
-            </form>
-        </div>
-    </div>
-</div>
+@navigation()
 
 <br>
 

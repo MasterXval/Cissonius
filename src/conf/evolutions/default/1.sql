@@ -8,7 +8,7 @@ CREATE TABLE product(
   description               VARCHAR(255),
   price                     INTEGER,
   price_strikeout           INTEGER,
-  image                     VARCHAR(255)
+  image                     VARCHAR(500)
 );
 
 # --- !Downs

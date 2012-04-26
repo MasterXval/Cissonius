@@ -24,6 +24,10 @@ object Application extends Controller {
     Ok(views.html.index(productForm))
   }
 
+  def list = Action {
+    Ok(views.html.list())
+  }
+
   def addProduct() = Action { implicit request =>
     productForm.bindFromRequest.fold(
     errors => BadRequest,
