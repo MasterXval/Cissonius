@@ -1,10 +1,12 @@
 package model
 
-import play.api.db._
-import play.api.Play.current
 
 import anorm._
 import anorm.SqlParser._
+import com.mongodb.casbah.Imports._
+import com.novus.salat._
+import com.novus.salat.global._
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -35,20 +37,22 @@ object Product {
       }
   }
 
-  def findAll(): Seq[Product] = {
-    DB.withConnection { implicit connection =>
-      SQL("select * from product").as(Product.complete *)
-    }
+  def create(product: Product) : Boolean =  {
+    val mongoConn = MongoConnection()
+    val mongoDB = mongoConn("casbah_test")
+    val mongoColl = mongoConn("casbah_test")("test_data")
+
+    val dbProduct = grater[Product].asDBObject(product)
+    mongoColl.save(dbProduct)
+    true
   }
 
-  def create(product: Product): Unit = DB.withConnection { implicit connection =>
-    SQL("insert into product(name, description, price, price_strikeout, image) " +
-      "values ({name},{description},{price},{price_strikeout},{image})").on(
-      'name -> product.name,
-      'description -> product.description,
-      'price ->  product.price,
-      'price_strikeout ->  product.price_strikeout,
-      'image ->  product.image
-    ).executeUpdate()
+  def findAll(): Iterator[Product] = {
+    val mongoConn = MongoConnection()
+    val mongoDB = mongoConn("casbah_test")
+    val mongoColl = mongoConn("casbah_test")("test_data")
+
+    mongoColl.find().map(x => grater[Product].asObject(x))
   }
+
 }

@@ -48,16 +48,4 @@ object Application extends Controller {
     Ok(json).as("application/json")
   }
 
-  def mongo() = Action {
-    val mongoConn = MongoConnection()
-    val mongoDB = mongoConn("casbah_test")
-    val mongoColl = mongoConn("casbah_test")("test_data")
-    val newObj = MongoDBObject("foo" -> "bar",
-      "x" -> "y",
-      "pie" -> 3.14,
-      "spam" -> "eggs")
-    mongoColl.save(newObj)
-    Ok(views.html.list())
-  }
-
 }

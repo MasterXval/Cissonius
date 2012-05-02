@@ -10,7 +10,8 @@ object ApplicationBuild extends Build {
     val appDependencies = Seq(
       "com.google.code.morphia" % "morphia" % "0.99",
       "org.mongodb" % "mongo-java-driver" % "2.7.3",
-      "com.mongodb.casbah" %% "casbah" % "2.1.5-1"
+      "com.mongodb.casbah" %% "casbah" % "2.1.5-1",
+      "com.novus" %% "salat-core" % "0.0.8-SNAPSHOT"
     )
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
