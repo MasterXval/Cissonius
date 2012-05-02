@@ -8,11 +8,14 @@ object ApplicationBuild extends Build {
     val appVersion      = "1.0-SNAPSHOT"
 
     val appDependencies = Seq(
-      // Add your project dependencies here,
+      "com.google.code.morphia" % "morphia" % "0.99",
+      "org.mongodb" % "mongo-java-driver" % "2.7.3",
+      "com.mongodb.casbah" %% "casbah" % "2.1.5-1"
     )
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
-      // Add your own project settings here      
+      resolvers += "Maven repository" at "http://morphia.googlecode.com/svn/mavenrepo/",
+      resolvers += "Scala Tools Repository" at "http://scala-tools.org/repo-releases/"
     )
 
 }

@@ -4,7 +4,7 @@
     <facet type="scala" name="Scala">
       <configuration>
         <option name="compilerLibraryLevel" value="Global" />
-        <option name="compilerLibraryName" value="scala-compiler" />
+        <option name="compilerLibraryName" value="scala-compiler-2.9.1" />
       </configuration>
     </facet>
   </component>
@@ -412,6 +412,78 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.google.code.morphia/morphia/jars/morphia-0.99.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/org.mongodb/mongo-java-driver/jars/mongo-java-driver-2.7.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.mongodb.casbah/casbah-query_2.9.1/jars/casbah-query_2.9.1-2.1.5-1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.mongodb.casbah/casbah-commons_2.9.1/jars/casbah-commons_2.9.1-2.1.5-1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/org.scala-tools.time/time_2.9.1/jars/time_2.9.1-0.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/org.scalaj/scalaj-collection_2.9.1/jars/scalaj-collection_2.9.1-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.mongodb.casbah/casbah-core_2.9.1/jars/casbah-core_2.9.1-2.1.5-1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.mongodb.casbah/casbah-gridfs_2.9.1/jars/casbah-gridfs_2.9.1-2.1.5-1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
@@ -794,6 +866,78 @@
       <library>
         <CLASSES>
           <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/local/net.sf.ehcache/ehcache-core/2.5.0/jars/ehcache-core.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.google.code.morphia/morphia/jars/morphia-0.99.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/org.mongodb/mongo-java-driver/jars/mongo-java-driver-2.7.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.mongodb.casbah/casbah-query_2.9.1/jars/casbah-query_2.9.1-2.1.5-1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.mongodb.casbah/casbah-commons_2.9.1/jars/casbah-commons_2.9.1-2.1.5-1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/org.scala-tools.time/time_2.9.1/jars/time_2.9.1-0.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/org.scalaj/scalaj-collection_2.9.1/jars/scalaj-collection_2.9.1-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.mongodb.casbah/casbah-core_2.9.1/jars/casbah-core_2.9.1-2.1.5-1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/local/Cellar/play/2.0/libexec/repository/cache/com.mongodb.casbah/casbah-gridfs_2.9.1/jars/casbah-gridfs_2.9.1-2.1.5-1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

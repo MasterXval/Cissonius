@@ -6,7 +6,10 @@ import play.api.mvc.{Action, Controller}
 import anorm.NotAssigned
 
 import com.codahale.jerkson.Json
+import com.google.code.morphia.Morphia
+import com.mongodb.Mongo
 import model.Product
+import com.mongodb.casbah.Imports._
 
 object Application extends Controller {
 
@@ -44,4 +47,17 @@ object Application extends Controller {
     val json = Json.generate(products)
     Ok(json).as("application/json")
   }
+
+  def mongo() = Action {
+    val mongoConn = MongoConnection()
+    val mongoDB = mongoConn("casbah_test")
+    val mongoColl = mongoConn("casbah_test")("test_data")
+    val newObj = MongoDBObject("foo" -> "bar",
+      "x" -> "y",
+      "pie" -> 3.14,
+      "spam" -> "eggs")
+    mongoColl.save(newObj)
+    Ok(views.html.list())
+  }
+
 }
