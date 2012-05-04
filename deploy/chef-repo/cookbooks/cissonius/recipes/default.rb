@@ -9,4 +9,4 @@
 
 include_recipe 'tomcat'
 include_recipe 'mongodb'
-#include_recipe 'elasticsearch'
+include_recipe 'elasticsearch'

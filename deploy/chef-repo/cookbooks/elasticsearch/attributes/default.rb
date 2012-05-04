@@ -12,3 +12,13 @@ set_unless[:elasticsearch][:fd_ulimit] = nil # nofiles limit (make this somethin
 
 set_unless[:elasticsearch][:default_replicas] = 1 # replicas are in addition to the original, so 1 replica means 2 copies of each shard
 set_unless[:elasticsearch][:default_shards] = 6 # 6*2 shards per index distributes evenly across 3, 4, or 6 nodes
+
+case platform
+  when "mac_os_x"
+    set_unless[:elasticsearch][:service_manager] = "launchd" 
+    set_unless[:elasticsearch][:user] = "root"
+    set_unless[:elasticsearch][:group] = "admin"
+  else
+    set_unless[:elasticsearch][:service_manager] = "runit"
+end
+

@@ -37,7 +37,7 @@ end
 ["/usr/lib/elasticsearch-#{node[:elasticsearch][:version]}", "/etc/elasticsearch"].each do |dir|
   directory dir do
     owner "root"
-    group "root"
+    group node[:elasticsearch][:group]
     mode 0755
   end
 end
@@ -66,7 +66,7 @@ end
 
 directory "/usr/lib/elasticsearch-#{node[:elasticsearch][:version]}/plugins" do
   owner "root"
-  group "root"
+  group node[:elasticsearch][:group]
   mode 0755
 end
 
@@ -118,6 +118,24 @@ template "/etc/elasticsearch/elasticsearch.yml" do
   mode 0600 # could have aws keys in it
 end
 
-runit_service "elasticsearch" do
-  action [ :enable, :start ]
+
+case node[:elasticsearch][:service_manager]
+when "runit"
+  runit_service "elasticsearch" do
+    action [ :enable, :start ]
+  end
+when "launchd"
+  cookbook_file "/Library/LaunchDaemons/local.elasticsearch.plist" do
+    source "local.elasticsearch.plist"
+    mode 0755
+  end
+end
+
+service "elasticsearch" do
+  service_name "elasticsearch"
+  case node["platform"]
+  when "mac_os_x", "mac_os_x_server"
+    provider "tomcat_mac"
+  end
+  action [:enable, :start]
 end
