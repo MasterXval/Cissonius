@@ -135,7 +135,7 @@ service "elasticsearch" do
   service_name "elasticsearch"
   case node["platform"]
   when "mac_os_x", "mac_os_x_server"
-    provider "tomcat_mac"
+    provider "elasticsearch_mac"
   end
   action [:enable, :start]
 end
