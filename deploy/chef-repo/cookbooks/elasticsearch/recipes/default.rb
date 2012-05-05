@@ -118,6 +118,26 @@ template "/etc/elasticsearch/elasticsearch.yml" do
   mode 0600 # could have aws keys in it
 end
 
+cookbook_file "/usr/lib/elasticsearch/plugins/elasticsearch-mapper-attachments-1.5.0-SNAPSHOT.jar" do
+  source "elasticsearch-mapper-attachments-1.5.0-SNAPSHOT.jar"
+  mode 0755
+  owner "root"
+  group "nogroup"
+end
+
+cookbook_file "/usr/lib/elasticsearch/plugins/mongo-java-driver-2.7.2.jar" do
+  source "mongo-java-driver-2.7.2.jar"
+  mode 0755
+  owner "root"
+  group "nogroup"
+end
+
+cookbook_file "/usr/lib/elasticsearch/plugins/elasticsearch-river-mongodb-1.2.0-SNAPSHOT.jar" do
+  source "elasticsearch-river-mongodb-1.2.0-SNAPSHOT.jar"
+  mode 0755
+  owner "root"
+  group "nogroup"
+end
 
 case node[:elasticsearch][:service_manager]
 when "runit"
