@@ -11,7 +11,8 @@ object ApplicationBuild extends Build {
       "com.google.code.morphia" % "morphia" % "0.99",
       "org.mongodb" % "mongo-java-driver" % "2.7.3",
       "com.mongodb.casbah" %% "casbah" % "2.1.5-1",
-      "com.novus" %% "salat-core" % "0.0.8-SNAPSHOT"
+      "com.novus" %% "salat-core" % "0.0.8-SNAPSHOT",
+      "org.apache.httpcomponents" % "httpclient" % "4.1.2"
     )
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
