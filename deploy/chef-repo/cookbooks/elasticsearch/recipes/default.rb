@@ -42,7 +42,7 @@ end
   end
 end
 
-["/usr/lib/elasticsearch/plugins/river-mongodb", "/var/log/elasticsearch", "/var/lib/elasticsearch", "/var/run/elasticsearch"].each do |dir|
+["/usr/lib/elasticsearch/plugins/elasticsearch-mapper-attachments","/usr/lib/elasticsearch/plugins/river-mongodb", "/var/log/elasticsearch", "/var/lib/elasticsearch", "/var/run/elasticsearch"].each do |dir|
   directory dir do
     owner "elasticsearch"
     group "nogroup"
@@ -118,15 +118,15 @@ template "/etc/elasticsearch/elasticsearch.yml" do
   mode 0600 # could have aws keys in it
 end
 
-cookbook_file "/usr/lib/elasticsearch/plugins/river-mongodb/elasticsearch-mapper-attachments-1.5.0-SNAPSHOT.jar" do
+cookbook_file "/usr/lib/elasticsearch/plugins/elasticsearch-mapper-attachments/elasticsearch-mapper-attachments-1.5.0-SNAPSHOT.jar" do
   source "elasticsearch-mapper-attachments-1.5.0-SNAPSHOT.jar"
   mode 0755
   owner "root"
   group "nogroup"
 end
 
-cookbook_file "/usr/lib/elasticsearch/plugins/river-mongodb/mongo-java-driver-2.7.2.jar" do
-  source "mongo-java-driver-2.7.2.jar"
+cookbook_file "/usr/lib/elasticsearch/plugins/river-mongodb/mongo-java-driver-2.7.3.jar" do
+  source "mongo-java-driver-2.7.3.jar"
   mode 0755
   owner "root"
   group "nogroup"

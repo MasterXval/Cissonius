@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9202ad34-5f4d-4b4d-a878-f75517b6f9bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/list.scala.html" afterPath="$PROJECT_DIR$/app/views/list.scala.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../deploy/chef-repo/cookbooks/elasticsearch/files/default/mongo-java-driver-2.7.2.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../deploy/chef-repo/cookbooks/elasticsearch/recipes/default.rb" afterPath="$PROJECT_DIR$/../deploy/chef-repo/cookbooks/elasticsearch/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../deploy/chef-repo/cookbooks/mongodb/recipes/default.rb" afterPath="$PROJECT_DIR$/../deploy/chef-repo/cookbooks/mongodb/recipes/default.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Setup.scala" afterPath="$PROJECT_DIR$/app/controllers/Setup.scala" />
     </list>
     <ignored path="Cissonius.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,21 +88,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Setup.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Setup.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Setup.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="32" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#21#61#0" expanded="true" />
-              </folding>
+            <state line="21" column="18" selection-start="563" selection-end="563" vertical-scroll-proportion="0.19863014">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.scala.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Product.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/Product.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="4" selection-start="1228" selection-end="1304" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.scala.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/list.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="101" selection-start="328" selection-end="328" vertical-scroll-proportion="0.23371105">
+            <state line="11" column="101" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,8 +139,8 @@
         <option value="$PROJECT_DIR$/project/Build.scala" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/views/navigation.scala.html" />
-        <option value="$PROJECT_DIR$/app/controllers/Setup.scala" />
         <option value="$PROJECT_DIR$/app/views/list.scala.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Setup.scala" />
       </list>
     </option>
   </component>
@@ -330,28 +341,14 @@
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Remote.Unnamed">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="packagepath" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -371,17 +368,13 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
       <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="packagepath" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -414,6 +407,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -621,65 +632,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/Build.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="53" selection-start="478" selection-end="478" vertical-scroll-proportion="0.26712328">
-          <folding />
-        </state>
+        <state line="15" column="53" selection-start="478" selection-end="478" vertical-scroll-proportion="0.26712328" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/setup.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.063739374">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.063739374" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="59" selection-start="437" selection-end="437" vertical-scroll-proportion="0.1849315">
-          <folding />
-        </state>
+        <state line="9" column="59" selection-start="437" selection-end="437" vertical-scroll-proportion="0.1849315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/navigation.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="35" selection-start="607" selection-end="607" vertical-scroll-proportion="0.27620396" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="142" selection-end="142" vertical-scroll-proportion="0.08498584" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="298" selection-end="316" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="298" selection-end="316" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/list.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="101" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/Product.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="55" selection-start="1351" selection-end="1360" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/navigation.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="607" selection-end="607" vertical-scroll-proportion="0.27620396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="142" selection-end="142" vertical-scroll-proportion="0.08498584">
+        <state line="50" column="4" selection-start="1228" selection-end="1304" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Setup.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="32" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#21#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/list.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="101" selection-start="328" selection-end="328" vertical-scroll-proportion="0.23371105">
+        <state line="21" column="18" selection-start="563" selection-end="563" vertical-scroll-proportion="0.19863014">
           <folding />
         </state>
       </provider>

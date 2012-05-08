@@ -5,6 +5,7 @@ import org.apache.http.client.HttpClient
 import org.apache.http.impl.client.{BasicResponseHandler, DefaultHttpClient}
 import org.apache.http.entity.StringEntity
 import org.apache.http.client.methods.{HttpPut, HttpPost, HttpGet}
+import com.mongodb.casbah.Imports._
 
 
 /**
@@ -18,18 +19,25 @@ import org.apache.http.client.methods.{HttpPut, HttpPost, HttpGet}
 object Setup  extends Controller {
   def setup = Action {
 
+    configureIndex
+
+    Ok(views.html.setup())
+  }
+
+  def configureIndex = {
     val  jsonString = """
 {
-  type: "mongodb",
-  mongodb: {
-    db: "casbah_test",
-    host: "localhost",
-    port: 27017,
-    collection: "test_data"
+  "type": "mongodb",
+  "mongodb": {
+    "db": "casbah_test",
+    "host": "localhost",
+    "port": 27017,
+    "collection": "test_data",
+    "gridfs" : false
   },
-  index: {
-    name: "productByName",
-    type: "product"
+  "index": {
+    "name": "product",
+    "type": "product"
   }
 }
       """
@@ -41,6 +49,6 @@ object Setup  extends Controller {
     val responseHandler = new BasicResponseHandler
     val responseBody = httpclient.execute(httpput, responseHandler)
     println(responseBody)
-    Ok(views.html.setup())
   }
+
 }

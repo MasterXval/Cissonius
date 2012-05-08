@@ -43,6 +43,30 @@ if node.recipes.include?("mongodb::default") or node.recipes.include?("mongodb")
   end
 end
 
+case node["platform"]
+when "mac_os_x", "mac_os_x_server"
+  cookbook_file "/tmp/replica_initiate.js" do
+    source "replica_initiate.js"
+    mode 0755
+    owner "root"
+    group "nogroup"
+  end
+  cookbook_file "/Library/LaunchDaemons/org.macports.mongodb.plist" do
+    source "org.macports.mongodb.plist"
+    mode 0755
+    owner "root"
+    group "nogroup"
+  end
+end
+
+service "mongodb" do
+  case node["platform"]
+  when "mac_os_x", "mac_os_x_server"
+    provider "mongodb_mac"
+    action [:enable, :start]
+  end
+end
+
 ## Firewall configuration ##
 #
 # in order to find all member nodes of a mongodb cluster you have to run queries
