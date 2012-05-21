@@ -1,0 +1,51 @@
+@(googleApiKey: String)
+@import helper.twitterBootstrap._
+@main("Welcome to Play 2.0") {
+@navigation()
+<script>
+
+    function fetchProducts() {
+    $('#main-search').text()
+    $.getJSON('https://www.googleapis.com/shopping/search/v1/public/products?key=@googleApiKey&country=US&alt=json&q=' + $('#main-search').val(), function(data) {
+    var items = [];
+
+    $.each(data['items'], function(key, val) {
+        var product = val["product"];
+        items.push('<li>' + product['title'] + '</li>');
+    });
+
+    $('#product-list').html($('<ul/>', {'class': 'product-list', html: items.join('')}))
+
+    });
+    }
+
+    function importProducts() {
+        $.getJSON('https://www.googleapis.com/shopping/search/v1/public/products?key=@googleApiKey&country=US&alt=json&q=' + $('#main-search').val(), function(data) {
+     $.ajax({
+            type: "post",
+            url: "/jsonImporter",
+            contentType: "application/json",
+            data: JSON.stringify( data )
+            })
+        });
+    }
+
+    $(document).ready(function () {
+     $('#main-search').keyup(fetchProducts);
+     $('#import-button').click(importProducts);
+    });
+</script>
+<br>
+
+<div class="row"><br><br>
+    <div class="span12"><br>
+        <input id="main-search"  type="text" />
+
+    </div>
+    <div class="span12"><br>
+        <input id="import-button" type="button" value="Import" />
+        <div id="product-list"></div>
+    </div>
+</div>
+
+}

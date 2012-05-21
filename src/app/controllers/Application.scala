@@ -6,10 +6,9 @@ import play.api.mvc.{Action, Controller}
 import anorm.NotAssigned
 
 import com.codahale.jerkson.Json
-import com.google.code.morphia.Morphia
-import com.mongodb.Mongo
 import model.Product
-import com.mongodb.casbah.Imports._
+import play.api.Play
+import play.api.Play.current
 
 object Application extends Controller {
 
@@ -22,6 +21,8 @@ object Application extends Controller {
       "image" -> text
     )
   )
+
+  val googleApiKey =  Play.configuration.getString("cissonius.google.shooping.apikey").get
 
   def index = Action {
     Ok(views.html.index(productForm))
@@ -48,4 +49,8 @@ object Application extends Controller {
     Ok(json).as("application/json")
   }
 
+  def importer() = Action {
+
+    Ok(views.html.importer(googleApiKey))
+  }
 }
