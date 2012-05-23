@@ -6,9 +6,12 @@ import play.api.mvc.{Action, Controller}
 import anorm.NotAssigned
 
 import com.codahale.jerkson.Json
+import com.codahale.jerkson.Json._
+
 import model.Product
-import play.api.Play
 import play.api.Play.current
+import play.api.libs.json.{JsValue, JsObject, JsArray}
+import play.api.{Logger, Play}
 
 object Application extends Controller {
 
@@ -52,5 +55,24 @@ object Application extends Controller {
   def importer() = Action {
 
     Ok(views.html.importer(googleApiKey))
+  }
+
+  def google2Product(item: JsObject): Product  = {
+
+    Logger.info("Inserting:" + (item \ "product" \ "title"));
+    Product(NotAssigned,
+      (item \ "product" \ "title").as[String],
+      (item \ "product" \ "description").as[String],
+      1,
+      1,
+      ((item \ "product" \ "images").as[List[JsObject]].head \ "link").as[String])
+  }
+
+  def jsonImporter() = Action(parse.json) {
+
+    request =>
+    (request.body \ "items" ).as[List[JsObject]].map(item  =>
+      Product.create(google2Product(item)))
+    Ok("Hello ")
   }
 }
