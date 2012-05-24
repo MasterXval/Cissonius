@@ -25,16 +25,6 @@ case class Product(id: Pk[Long],
 
 object Product {
 
-  val complete = {
-    get[Pk[Long]]("id") ~
-    get[String]("name") ~
-    get[String]("description") ~
-    get[Long]("price") ~
-    get[String]("image") map {
-        case id~name~description~price~image => Product(id, name, description, price, image)
-      }
-  }
-
   def create(product: Product){
 
     val dbProduct = grater[Product].asDBObject(product)
