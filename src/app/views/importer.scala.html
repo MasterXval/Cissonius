@@ -6,7 +6,7 @@
 
     function fetchProducts() {
     $('#main-search').text()
-    $.getJSON('https://www.googleapis.com/shopping/search/v1/public/products?key=@googleApiKey&country=US&alt=json&q=' + $('#main-search').val(), function(data) {
+    $.getJSON('https://www.googleapis.com/shopping/search/v1/public/products?key=@googleApiKey&country=US&alt=json&thumbnails=64:64&q=' + $('#main-search').val(), function(data) {
     var items = [];
 
     $.each(data['items'], function(key, val) {
@@ -20,7 +20,7 @@
     }
 
     function importProducts() {
-        $.getJSON('https://www.googleapis.com/shopping/search/v1/public/products?key=@googleApiKey&country=US&alt=json&q=' + $('#main-search').val(), function(data) {
+        $.getJSON('https://www.googleapis.com/shopping/search/v1/public/products?key=@googleApiKey&country=US&alt=json&thumbnails=64:64&q=' + $('#main-search').val(), function(data) {
      $.ajax({
             type: "post",
             url: "/jsonImporter",

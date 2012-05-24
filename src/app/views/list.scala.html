@@ -9,7 +9,7 @@
     var items = [];
 
     $.each(data, function(key, val) {
-        items.push('<li id="' + key + '"><div><img height="200" width="200" src="'+ val["image"] + '"/>' + val['name'] + '</div></li>');
+        items.push('<li id="' + key + '" class="product-item"><div class="outer"><img height="64" width="64" src="'+ val["image"] + '"/>' + val['name'] + '</div></li>');
     });
 
     $('<ul/>', {
@@ -28,7 +28,7 @@
 
 <div class="row"><br>
     <div class="span12"><br>
-     <div class="product-list"></div>
+        <div class="product-list"></div>
     </div>
 </div>
 

@@ -1,0 +1,14 @@
+.product-item {
+    float : left;
+    height : 80px;
+    width : 300px;
+    list-style: none;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    margin : 5px;
+}
+
+.product-item div.outer {
+
+}
