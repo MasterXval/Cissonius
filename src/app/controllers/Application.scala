@@ -72,6 +72,6 @@ object Application extends Controller {
     request =>
     (request.body \ "items" ).as[List[JsObject]].map(item  =>
       Product.create(google2Product(item)))
-    Ok("Hello ")
+    Ok("")
   }
 }
