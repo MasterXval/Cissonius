@@ -20,7 +20,6 @@ case class Product(id: Pk[Long],
                    name: String,
                    description: String,
                    price : Long,
-                   price_strikeout : Long,
                    image : String
                    )
 
@@ -31,24 +30,20 @@ object Product {
     get[String]("name") ~
     get[String]("description") ~
     get[Long]("price") ~
-    get[Long]("price_strikeout") ~
     get[String]("image") map {
-        case id~name~description~price~price_strikeout~image => Product(id, name, description, price, price_strikeout, image)
+        case id~name~description~price~image => Product(id, name, description, price, image)
       }
   }
 
-  def create(product: Product) : Boolean =  {
-
-    val mongoColl = MongoDBManager.productCollection()
+  def create(product: Product){
 
     val dbProduct = grater[Product].asDBObject(product)
-    mongoColl.save(dbProduct)
-    true
+    MongoDBManager.productCollection().save(dbProduct)
   }
 
   def findAll(): Iterator[Product] = {
-    val mongoColl = MongoDBManager.productCollection()
-    mongoColl.find().map(x => grater[Product].asObject(x))
+
+    MongoDBManager.productCollection().find().map(x => grater[Product].asObject(x))
   }
 
 }

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9202ad34-5f4d-4b4d-a878-f75517b6f9bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.scala" afterPath="$PROJECT_DIR$/app/controllers/Application.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/Product.scala" afterPath="$PROJECT_DIR$/app/model/Product.scala" />
     </list>
     <ignored path="Cissonius.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,10 +76,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Application.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Application.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="92" selection-start="593" selection-end="661" vertical-scroll-proportion="-8.461538">
+            <state line="65" column="84" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.63778406">
               <folding />
             </state>
           </provider>
@@ -87,37 +88,10 @@
       <file leaf-file-name="Product.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/Product.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="54" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MongoDBManager.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/MongoDBManager.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="28" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+            <state line="39" column="23" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#15#50#0" expanded="true" />
+                <element signature="e#16#30#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.conf" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/conf/application.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="5" selection-start="765" selection-end="765" vertical-scroll-proportion="0.55479455">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="importer.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/importer.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="47" selection-start="1261" selection-end="1261" vertical-scroll-proportion="-25.625">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -147,10 +121,10 @@
         <option value="$PROJECT_DIR$/conf/private.conf" />
         <option value="$PROJECT_DIR$/app/views/importer.scala.html" />
         <option value="$PROJECT_DIR$/conf/routes" />
-        <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
-        <option value="$PROJECT_DIR$/app/model/Product.scala" />
         <option value="$PROJECT_DIR$/app/model/MongoDBManager.scala" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
+        <option value="$PROJECT_DIR$/app/model/Product.scala" />
+        <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
       </list>
     </option>
   </component>
@@ -272,28 +246,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cissonius" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Product.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -665,39 +617,41 @@
         <state line="12" column="0" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/importer.scala.html">
+    <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="47" selection-start="1261" selection-end="1261" vertical-scroll-proportion="-25.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="92" selection-start="593" selection-end="661" vertical-scroll-proportion="-8.461538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Product.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="54" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0">
+        <state line="27" column="5" selection-start="765" selection-end="765" vertical-scroll-proportion="0.07534247">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/MongoDBManager.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="28" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+        <state line="5" column="28" selection-start="125" selection-end="125" vertical-scroll-proportion="0.10273973">
           <folding>
             <element signature="e#15#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/application.conf">
+    <entry file="file://$PROJECT_DIR$/app/views/importer.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="765" selection-end="765" vertical-scroll-proportion="0.55479455">
+        <state line="41" column="47" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.88744587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Product.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="23" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#16#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="84" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.63778406">
           <folding />
         </state>
       </provider>

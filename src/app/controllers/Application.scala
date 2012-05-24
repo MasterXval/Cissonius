@@ -40,7 +40,7 @@ object Application extends Controller {
     errors => BadRequest,
     {
       case (name, description, price, price_strikeout, image) =>
-        Product.create(Product(NotAssigned, name, description, price, price_strikeout, image))
+        Product.create(Product(NotAssigned, name, description, price, image))
         Redirect(routes.Application.index())
     }
     )
@@ -63,8 +63,7 @@ object Application extends Controller {
     Product(NotAssigned,
       (item \ "product" \ "title").as[String],
       (item \ "product" \ "description").as[String],
-      1,
-      1,
+      ((item \ "product" \ "inventories").as[List[JsObject]].head \ "price").as[Long],
       ((item \ "product" \ "images").as[List[JsObject]].head \ "link").as[String])
   }
 
