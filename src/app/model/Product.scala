@@ -38,9 +38,8 @@ object Product {
   }
 
   def create(product: Product) : Boolean =  {
-    val mongoConn = MongoConnection()
-    val mongoDB = mongoConn("casbah_test")
-    val mongoColl = mongoConn("casbah_test")("test_data")
+
+    val mongoColl = MongoDBManager.productCollection()
 
     val dbProduct = grater[Product].asDBObject(product)
     mongoColl.save(dbProduct)
@@ -48,10 +47,7 @@ object Product {
   }
 
   def findAll(): Iterator[Product] = {
-    val mongoConn = MongoConnection()
-    val mongoDB = mongoConn("casbah_test")
-    val mongoColl = mongoConn("casbah_test")("test_data")
-
+    val mongoColl = MongoDBManager.productCollection()
     mongoColl.find().map(x => grater[Product].asObject(x))
   }
 
