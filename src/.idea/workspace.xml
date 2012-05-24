@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9202ad34-5f4d-4b4d-a878-f75517b6f9bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/MongoDBManager.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/Product.scala" afterPath="$PROJECT_DIR$/app/model/Product.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/application.conf" afterPath="$PROJECT_DIR$/conf/application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/private.conf" afterPath="$PROJECT_DIR$/conf/private.conf" />
     </list>
     <ignored path="Cissonius.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,7 +107,7 @@
       <file leaf-file-name="application.conf" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf/application.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="31" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.79452056">
+            <state line="27" column="5" selection-start="765" selection-end="765" vertical-scroll-proportion="0.55479455">
               <folding />
             </state>
           </provider>
@@ -676,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/private.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="1" selection-end="27" vertical-scroll-proportion="0.021186441">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="92" selection-start="593" selection-end="661" vertical-scroll-proportion="-8.461538">
@@ -708,7 +697,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="31" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.79452056">
+        <state line="27" column="5" selection-start="765" selection-end="765" vertical-scroll-proportion="0.55479455">
           <folding />
         </state>
       </provider>
