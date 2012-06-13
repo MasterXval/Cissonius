@@ -42,14 +42,6 @@ end
   end
 end
 
-["/usr/lib/elasticsearch/plugins/elasticsearch-mapper-attachments","/usr/lib/elasticsearch/plugins/river-mongodb", "/var/log/elasticsearch", "/var/lib/elasticsearch", "/var/run/elasticsearch"].each do |dir|
-  directory dir do
-    owner "elasticsearch"
-    group "nogroup"
-    mode 0755
-  end
-end
-
 bash "unzip elasticsearch" do
   user "root"
   cwd "/tmp"
@@ -72,6 +64,14 @@ end
 
 link "/usr/lib/elasticsearch" do
   to "/usr/lib/elasticsearch-#{node[:elasticsearch][:version]}"
+end
+
+["/usr/lib/elasticsearch/plugins/elasticsearch-mapper-attachments","/usr/lib/elasticsearch/plugins/river-mongodb", "/var/log/elasticsearch", "/var/lib/elasticsearch", "/var/run/elasticsearch"].each do |dir|
+  directory dir do
+    owner "elasticsearch"
+    group "nogroup"
+    mode 0755
+  end
 end
 
 aws = nil
